@@ -45,7 +45,7 @@ strong {
 .weather-app {
   border: 1px solid whitesmoke;
   border-radius: 16px;
-  background-color: rgb(245 245 245);
+  background-color: white;
   padding: 20px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   margin-bottom: 10px;
