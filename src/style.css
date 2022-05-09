@@ -1,4 +1,5 @@
 body {
+  display: block;
   font-family: Helvetica, sans-serif;
   background-color: rgb(205, 251, 251);
   padding: 10px;
@@ -43,12 +44,25 @@ strong {
 }
 
 .weather-app {
-  border: 1px solid whitesmoke;
   border-radius: 16px;
   background-color: white;
   padding: 20px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   margin-bottom: 10px;
+}
+
+.weather-app .search-input {
+  border: 1px solid #a9a7b3;
+  font-size: 14px;
+}
+
+.weather-app .btn {
+  background: rgb(2, 161, 161);
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid rgb(2, 161, 161);
+  height: 34px;
+  width: 100%;
 }
 
 .weather-temp .temp {
