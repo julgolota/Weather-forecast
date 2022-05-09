@@ -25,6 +25,12 @@ li {
   line-height: 20px;
   list-style: none;
 }
+img {
+  position: relative;
+  top: -20px;
+  margin-left: 10px;
+  line-height: 1;
+}
 
 strong {
   color: #f76590;
@@ -35,18 +41,18 @@ strong {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .weather-app {
   border: 1px solid whitesmoke;
   border-radius: 16px;
+  background-color: rgb(245 245 245);
   padding: 20px;
-  background-color: whitesmoke;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   margin-bottom: 10px;
 }
 
 .temp {
   color: #272142;
-  margin-left: 10px;
   font-weight: 700;
   font-size: 85px;
   line-height: 1;
