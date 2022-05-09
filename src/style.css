@@ -51,18 +51,28 @@ strong {
   margin-bottom: 10px;
 }
 
-.temp {
+.weather-temp .temp {
   color: #272142;
   font-weight: 700;
   font-size: 85px;
   line-height: 1;
 }
 
-.units {
+.weather-temp .units {
   color: #272142;
   font-size: 16px;
   font-weight: 400;
   position: relative;
   line-height: 1;
   top: -42px;
+}
+
+.weather-temp .active {
+  color: #272142;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
 }
