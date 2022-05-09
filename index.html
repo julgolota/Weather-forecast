@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather forecast</title>
   </head>
@@ -19,17 +20,21 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-6">
-              <h1>Kyiv</h1>
+              <h1 id="city"></h1>
               <ul>
-                <li>Monday <strong> 10:50</strong>, broken clouds</li>
                 <li>
-                  Humidity: <strong>56% </strong>, Wind:
-                  <strong>0.45km/h</strong>
+                  <span id="date"> Monday </span>,
+                  <span id="description"> </span>
+                </li>
+                <li>
+                  Humidity: <strong> <span id="humidity"></span>%</strong>,
+                  Wind:
+                  <strong> <span id="wind"></span> km/h </strong>
                 </li>
               </ul>
             </div>
             <div class="col-6">
-              <span class="temp"> ⛅️ 17</span>
+              <span class="temp" id="temp"> <img scr="⛅️" alt="" /></span>
               <span class="units"> °C | °F</span>
             </div>
           </div>

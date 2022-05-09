@@ -28,6 +28,7 @@ li {
 
 strong {
   color: #f76590;
+  font-weight: normal;
 }
 
 .weather-app-wrapper {
