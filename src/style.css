@@ -26,10 +26,10 @@ li {
   line-height: 20px;
   list-style: none;
 }
+
 img {
   position: relative;
   top: -20px;
-  margin-left: 10px;
   line-height: 1;
 }
 
@@ -51,7 +51,7 @@ strong {
   margin-bottom: 10px;
 }
 
-.weather-app .search-input {
+.weather-app .form-control {
   border: 1px solid #a9a7b3;
   font-size: 14px;
 }
@@ -89,4 +89,18 @@ strong {
 
 .weather-temp .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-date {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.weather-forecast-temp-night {
+  font-size: 16px;
+  opacity: 0.5;
 }
