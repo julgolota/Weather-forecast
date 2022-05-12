@@ -29,6 +29,8 @@ function formatDay(timestamp) {
   return days[day];
 }
 
+let iconNew = null;
+
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -37,18 +39,26 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
+      let forecastDescription = forecastDay.weather[0].main;
+      if (forecastDescription === "Rain") {
+        iconNew = `<i class="bi bi-cloud-rain other-days-icon"></i>`;
+      } else if (forecastDescription === "Clouds") {
+        iconNew = `<i class="bi bi-cloud other-days-icon"></i>`;
+      } else if (forecastDescription === "Thunderstorm") {
+        iconNew = `<i class="bi bi-cloud-lightning-rain other-days-icon"></i>`;
+      } else if (forecastDescription === "Drizzle") {
+        iconNew = `<i class="bi bi-cloud-drizzle other-days-icon"></i>`;
+      } else if (forecastDescription === "Clear") {
+        iconNew = `<i class="bi bi-sun other-days-icon"></i>`;
+      } else if (forecastDescription === "Snow") {
+        iconNew = `<i class="bi bi-snow other-days-icon"></i>`;
+      }
       forecastHTML =
         forecastHTML +
         `
     <div class="col-2">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-      <img
-        src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png"
-        alt=""
-        width="72px"
-      />
+      <div class="weather-forecast-img">${iconNew}</div>
       <div class="weather-forecast-temp">
         <span class="weather-forecast-temp-day">${Math.round(
           forecastDay.temp.max
@@ -88,10 +98,39 @@ function displayTemp(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.innerHTML = response.data.weather[0].main;
+  if (iconElement.innerHTML === "Rain") {
+    iconElement.innerHTML = "rainy";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-cloud-rain", "today-icon-rainy");
+  } else if (iconElement.innerHTML === "Clouds") {
+    iconElement.innerHTML = "cloudy";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-cloud", "today-icon-cloudy");
+  } else if (iconElement.innerHTML === "Thunderstorm") {
+    iconElement.innerHTML = "stormy";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-cloud-lightning-rain", "today-icon-rainy");
+  } else if (iconElement.innerHTML === "Drizzle") {
+    iconElement.innerHTML = "rainy";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-cloud-drizzle", "today-icon-rainy");
+  } else if (iconElement.innerHTML === "Clear") {
+    iconElement.innerHTML = "clear";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-sun", "today-icon-clear");
+  } else if (iconElement.innerHTML === "Snow") {
+    iconElement.innerHTML = "snowy";
+    document
+      .getElementById("icon")
+      .classList.add("bi", "bi-snow", "today-icon-snowy");
+  }
+
   getForecast(response.data.coord);
 }
 

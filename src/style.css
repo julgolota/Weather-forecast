@@ -97,17 +97,23 @@ strong {
 }
 
 .weather-forecast-date {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   color: #272142;
 }
 
-.weather-forecast-temp-day {
+.weather-forecast-img {
   color: #f76590;
+  font-size: 46px;
+  padding: 10px;
+}
+
+.weather-forecast-temp-day {
+  color: #272142;
   font-weight: bold;
 }
 
 .weather-forecast-temp-night {
   opacity: 0.5;
-  color: #f76590;
+  color: #272142;
 }
