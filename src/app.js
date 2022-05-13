@@ -92,6 +92,8 @@ function displayTemp(response) {
 
   celsiusTemp = response.data.main.temp;
 
+  console.log(response);
+
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -100,33 +102,27 @@ function displayTemp(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.innerHTML = response.data.weather[0].main;
   if (iconElement.innerHTML === "Rain") {
-    iconElement.innerHTML = "rainy";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-cloud-rain", "today-icon-rainy");
   } else if (iconElement.innerHTML === "Clouds") {
-    iconElement.innerHTML = "cloudy";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-cloud", "today-icon-cloudy");
   } else if (iconElement.innerHTML === "Thunderstorm") {
-    iconElement.innerHTML = "stormy";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-cloud-lightning-rain", "today-icon-rainy");
   } else if (iconElement.innerHTML === "Drizzle") {
-    iconElement.innerHTML = "rainy";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-cloud-drizzle", "today-icon-rainy");
   } else if (iconElement.innerHTML === "Clear") {
-    iconElement.innerHTML = "clear";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-sun", "today-icon-clear");
   } else if (iconElement.innerHTML === "Snow") {
-    iconElement.innerHTML = "snowy";
-    document
+    iconElement.innerHTML = document
       .getElementById("icon")
       .classList.add("bi", "bi-snow", "today-icon-snowy");
   }

@@ -38,6 +38,7 @@ strong {
 }
 
 .weather-app {
+  border: 0.2px solid rgb(2, 161, 161);
   border-radius: 16px;
   background-color: white;
   padding: 20px;
@@ -48,6 +49,7 @@ strong {
 .weather-app .form-control {
   border: 1px solid #a9a7b3;
   font-size: 14px;
+  height: 34px;
 }
 
 .weather-app .btn {
@@ -63,6 +65,8 @@ strong {
   position: relative;
   top: -20px;
   line-height: 1;
+  font-size: 85px;
+  color: #f76590;
 }
 
 .weather-temp .temp {
