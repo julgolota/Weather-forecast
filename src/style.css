@@ -1,30 +1,30 @@
 body {
   display: block;
-  font-family: Helvetica, sans-serif;
   background-color: rgb(205, 251, 251);
+  font-family: Helvetica, sans-serif;
   padding: 10px;
 }
 
 h1 {
+  color: #272142;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  color: #272142;
+  margin-bottom: 0;
 }
 
 ul {
   margin: 0;
-  padding: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 li {
-  list-style: none;
   color: #a9a7b3;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
   list-style: none;
+  line-height: 20px;
 }
 
 strong {
@@ -32,18 +32,22 @@ strong {
   font-weight: normal;
 }
 
+small {
+  color: #272142;
+}
+
 .weather-app-wrapper {
-  max-width: 600px;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .weather-app {
   border: 0.2px solid rgb(2, 161, 161);
   border-radius: 16px;
   background-color: white;
-  padding: 20px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   margin-bottom: 10px;
+  padding: 20px;
 }
 
 .weather-app .form-control {
@@ -54,34 +58,41 @@ strong {
 
 .weather-app .btn {
   background: rgb(2, 161, 161);
+  border: 1px solid rgb(2, 161, 161);
   font-weight: 400;
   font-size: 14px;
-  border: 1px solid rgb(2, 161, 161);
   height: 34px;
   width: 100%;
 }
 
 .weather-img {
-  position: relative;
-  top: -20px;
-  line-height: 1;
-  font-size: 85px;
   color: #f76590;
+  font-size: 86px;
+  line-height: 1;
+  padding-right: 5px;
+  position: relative;
+  top: 6px;
+}
+
+.weather-temp {
+  padding: 10px;
 }
 
 .weather-temp .temp {
   color: #272142;
   font-weight: 700;
-  font-size: 85px;
+  font-size: 86px;
   line-height: 1;
 }
 
 .weather-temp .units {
   color: #272142;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  position: relative;
   line-height: 1;
+  padding-left: 5px;
+  position: relative;
+
   top: -42px;
 }
 
@@ -96,14 +107,14 @@ strong {
 }
 
 .weather-forecast {
-  text-align: center;
   font-size: 16px;
+  text-align: center;
 }
 
 .weather-forecast-date {
+  color: #272142;
   margin-top: 40px;
   text-align: center;
-  color: #272142;
 }
 
 .weather-forecast-img {
@@ -118,6 +129,6 @@ strong {
 }
 
 .weather-forecast-temp-night {
-  opacity: 0.5;
   color: #272142;
+  opacity: 0.5;
 }
